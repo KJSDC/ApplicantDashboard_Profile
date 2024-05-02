@@ -1,0 +1,1296 @@
+<form [formGroup]="form">
+    <select class="border-[1px] border-solid border-[#E1DFDF] outline-none py-3 px-4 pe-9 block w-full" (change)="onNationalitySelect($event)">
+        <option selected>Nationality</option>
+        <option>mca</option>
+        <option>bca</option>
+        <option>3</option>
+      </select>
+      
+  <button *ngFor="let type of formTypes" (click)="addForm(type)">
+    Add {{ type }}
+  </button>
+  <!-- Form Array -->
+  <div formArrayName="temp">
+    <div *ngFor="let control of form.get('temp')['controls']; let i = index">
+      <div [formGroupName]="i">
+        <div formGroupName="form1" *ngIf="control.get('form1')">
+          <div
+            class="w-full rounded-[24px] h-fit bg-[#Ffff] mt-10 mb-10 pb-0 p-[2em] box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.1), 0px 10px 8px 0px rgba(0, 0, 0, 0.04) sm:w-[800px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]"
+          >
+            <!-- progress-bar -->
+            <div class="progress">
+              <div class="flex justify-between items-center">
+                <h1>Application Form</h1>
+                <p>
+                  <span class="date">Last Updated</span>
+                  November 22 2023
+                </p>
+              </div>
+              <div
+                class="h-[90px] mt-[50px] hidden lg:flex items-center gap-[5px]"
+              >
+                <div class="relative">
+                  <span class="absolute top-[20%] z-30 left-[39%] text-[32px]"
+                    >1</span
+                  >
+                  <!-- cicle  -->
+                  <svg
+                    class="relative"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="60"
+                    height="63"
+                    viewBox="0 0 47 47"
+                    fill="none"
+                  >
+                    <circle cx="23.5" cy="23.5" r="23.5" fill="#3D63F7 " />
+                  </svg>
+                </div>
+                <div>
+                  <p class="app-para">Application</p>
+                </div>
+                <div class="relative">
+                  <div class="w-[215px] h-[1px] bg-[#E2E2E2;]"></div>
+                  <div class="absolute left-[30%] bottom-[-7px] z-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="#14AAFF"
+                    >
+                      <circle cx="7" cy="7" r="7" fill="#14AAFF" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="app-para">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="63"
+                    height="63"
+                    viewBox="0 0 47 47"
+                    fill="none"
+                  >
+                    <circle cx="23.5" cy="23.5" r="23.5" fill="#EDEFF5" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="app-para">Application</p>
+                </div>
+                <div class="w-[215px] h-[1px] bg-[#E2E2E2;]"></div>
+                <div class="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="63"
+                    height="63"
+                    viewBox="0 0 47 47"
+                    fill="none"
+                  >
+                    <circle cx="23.5" cy="23.5" r="23.5" fill="#EDEFF5" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="app-para">Application</p>
+                </div>
+                <div class="w-[215px] h-[1px] bg-[#E2E2E2;]"></div>
+                <div class="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="63"
+                    height="63"
+                    viewBox="0 0 47 47"
+                    fill="none"
+                  >
+                    <circle cx="23.5" cy="23.5" r="23.5" fill="#EDEFF5" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="app-para">Application</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- porgess-bar-ends -->
+            <!-- personal-details -->
+            <section class="personal-Details">
+              <form>
+                <div class="flex gap-[9px] items-center mt-[50px] mb-[30px]">
+                  <h2 class="">Personal Details</h2>
+                  <input
+                    (change)="disablepersonal($event)"
+                    type="checkbox"
+                    name=""
+                    id=""
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="38"
+                    height="38"
+                    viewBox="0 0 38 38"
+                    fill="none"
+                  >
+                    <path
+                      d="M19.0002 6.33325C20.6799 6.33325 22.2908 7.00051 23.4785 8.18824C24.6662 9.37597 25.3335 10.9869 25.3335 12.6666C25.3335 14.3463 24.6662 15.9572 23.4785 17.1449C22.2908 18.3327 20.6799 18.9999 19.0002 18.9999C17.3205 18.9999 15.7095 18.3327 14.5218 17.1449C13.3341 15.9572 12.6668 14.3463 12.6668 12.6666C12.6668 10.9869 13.3341 9.37597 14.5218 8.18824C15.7095 7.00051 17.3205 6.33325 19.0002 6.33325ZM19.0002 22.1666C25.9985 22.1666 31.6668 25.0008 31.6668 28.4999V31.6666H6.3335V28.4999C6.3335 25.0008 12.0018 22.1666 19.0002 22.1666Z"
+                      fill="#3D63F7"
+                    />
+                  </svg>
+                </div>
+                <div
+                  [style.opacity]="disableperson ? '0.5' : '1'"
+                  [style.pointer-events]="disableperson ? 'none' : 'auto'"
+                  class="w-[100%] rounded-[16px] border-[1px] border-solid border-[#E1DFDF] border: 1px solid #e1dfdf; p-[1.5em] sm:p-[2em]"
+                >
+                  <div class="flex flex-col gap-10 items-center sm:gap-5">
+                    <div
+                      class="w-full flex gap-10 items-center flex-col sm:flex-row"
+                    >
+                      <div class="w-full sm:w-full md:w-full lg:full">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                            formControlName="firstName"
+                          />
+                          <label for="input" class="placeholder"
+                            ><b
+                              >Name of the applicant
+                              <span class="font-light"
+                                >(As per the SSLC record)</span
+                              ></b
+                            ></label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="w-full flex gap-10 items-center flex-col sm:flex-row"
+                    >
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                            formControlName="dob"
+                          />
+                          <label for="input" class="placeholder">DOB</label>
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <select
+                            class="border-[1px] border-solid border-[#E1DFDF] outline-none py-3 px-4 pe-9 block w-full"
+                          >
+                            <option selected>Nationality</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <select
+                            class="border-[1px] border-solid border-[#E1DFDF] outline-none py-3 px-4 pe-9 block w-full"
+                          >
+                            <option selected>Religion</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="w-full flex gap-10 items-center flex-col sm:flex-row"
+                    >
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            formControlName="caste"
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                            formControlName="caste"
+                          />
+                          <label for="input" class="placeholder"
+                            >Caste Category</label
+                          >
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <select
+                            formControlName="subcaste"
+                            class="border-[1px] border-solid border-[#E1DFDF] outline-none py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm"
+                          >
+                            <option selected>Sub Caste Category</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            formControlName="birthtown"
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >Birth Place Town/City</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="w-full flex gap-10 items-center flex-col sm:flex-row"
+                    >
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            formControlName="lang"
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >Mother Tounge</label
+                          >
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            formControlName="wno"
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >Whatsapp No</label
+                          >
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            formControlName="alterno"
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >Alternate Phone Number</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-full flex-col mt-2 gap-2 sm:flex-row sm:gap-10"
+                  >
+                    <div class="mt-4 w-1/3">
+                      <label>Blood Group</label>
+                      <div class="input-container">
+                        <select
+                          class="mt-2 border-[1px] border-solid border-[#E1DFDF] outline-none py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm"
+                        >
+                          <option selected>Select</option>
+                          <option>A+</option>
+                          <option>B+</option>
+                          <option>C+</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mt-4 w-1/3">
+                      <label>Martial Status</label>
+                      <div
+                        class="flex w-full items-center gap-x-6 mt-2 border-[1px] border-solid border-[#E1DFDF] p-3 rounded-lg h-[50px]"
+                      >
+                        <div class="flex">
+                          <input
+                            type="radio"
+                            name="hs-default-radio"
+                            class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50"
+                            id="hs-default-radio"
+                          />
+                          <label
+                            for="hs-default-radio"
+                            class="text-md text-gray-500 ms-2 dark:text-gray-400"
+                          >
+                            Married
+                          </label>
+                        </div>
+
+                        <div class="flex">
+                          <input
+                            type="radio"
+                            name="hs-default-radio"
+                            class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600"
+                            id="hs-checked-radio"
+                          />
+                          <label
+                            for="hs-checked-radio"
+                            class="text-md text-gray-500 ms-2 dark:text-gray-400"
+                          >
+                            Unmarried
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-4 w-1/3">
+                      <label>Gender</label>
+                      <div
+                        class="flex items-center gap-x-6 mt-2 border-[1px] border-solid border-[#E1DFDF] p-3 rounded-lg h-[50px]"
+                      >
+                        <div class="flex">
+                          <input
+                            type="radio"
+                            name="hs-radio-group"
+                            class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500"
+                            id="hs-radio-group-1"
+                          />
+                          <label
+                            for="hs-radio-group-1"
+                            class="text-sm text-gray-500 ms-2 dark:text-gray-400"
+                            >Male</label
+                          >
+                        </div>
+
+                        <div class="flex">
+                          <input
+                            type="radio"
+                            name="hs-radio-group"
+                            class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500"
+                            id="hs-radio-group-2"
+                          />
+                          <label
+                            for="hs-radio-group-2"
+                            class="text-sm text-gray-500 ms-2 dark:text-gray-400"
+                            >Female</label
+                          >
+                        </div>
+                        <div class="flex">
+                          <input
+                            type="radio"
+                            name="hs-radio-group"
+                            class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500"
+                            id="hs-radio-group-3"
+                          />
+                          <label
+                            for="hs-radio-group-3"
+                            class="text-sm text-gray-500 ms-2 dark:text-gray-400"
+                            >Other</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </section>
+            <!-- Address-begins -->
+            <section class="address">
+              <div class="flex gap-[9px] items-center mt-[30px] mb-[30px]">
+                <h2 class="">Address</h2>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="32"
+                  viewBox="0 0 24 32"
+                  fill="none"
+                >
+                  <path
+                    d="M11.9998 15.2084C10.95 15.2084 9.94321 14.7914 9.20087 14.049C8.45854 13.3067 8.04151 12.2999 8.04151 11.2501C8.04151 10.2003 8.45854 9.19345 9.20087 8.45112C9.94321 7.70879 10.95 7.29175 11.9998 7.29175C13.0497 7.29175 14.0565 7.70879 14.7988 8.45112C15.5411 9.19345 15.9582 10.2003 15.9582 11.2501C15.9582 11.7699 15.8558 12.2846 15.6569 12.7649C15.4579 13.2451 15.1664 13.6815 14.7988 14.049C14.4312 14.4166 13.9949 14.7082 13.5146 14.9071C13.0344 15.106 12.5197 15.2084 11.9998 15.2084ZM11.9998 0.166748C9.06036 0.166748 6.24127 1.33445 4.16274 3.41298C2.08421 5.49151 0.916504 8.3106 0.916504 11.2501C0.916504 19.5626 11.9998 31.8334 11.9998 31.8334C11.9998 31.8334 23.0832 19.5626 23.0832 11.2501C23.0832 8.3106 21.9155 5.49151 19.8369 3.41298C17.7584 1.33445 14.9393 0.166748 11.9998 0.166748Z"
+                    fill="#3D63F7"
+                  />
+                </svg>
+              </div>
+              <div class="w-full h-fit rounded-[16px]">
+                <div class="flex w-full gap-4 flex-col md:flex-row lg:flex-row">
+                  <div
+                    class="w-full border-[1px] border-solid border-[#E1DFDF] p-3 rounded-[10px]"
+                  >
+                    <div class="mt-3 mb-3">
+                      <p class="perm">Permanant Address</p>
+                    </div>
+                    <label class="" for="address">Address Line </label>
+                    <textarea
+                      name="address"
+                      formControlName="address"
+                      class="resize-none bg-[#F3F4F6] w-full outline-none rounded-md p-2 mt-3 mb-3"
+                      id=""
+                      cols="30"
+                      rows="5"
+                    ></textarea>
+
+                    <div class="flex flex-col sm:flex-row gap-5">
+                      <div class="w-full sm:w-1/2">
+                        <div class="input-container">
+                          <select
+                            formControlName="country"
+                            class="border-[1px] border-solid border-[#E1DFDF] outline-none py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm"
+                          >
+                            <option selected>Country</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/2">
+                        <div class="input-container">
+                          <select
+                            class="border-[1px] border-solid border-[#E1DFDF] outline-none py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm"
+                          >
+                            <option selected>State</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-5 mt-4">
+                      <div class="w-full sm:w-1/2">
+                        <div class="input-container">
+                          <select
+                            class="border-[1px] border-solid border-[#E1DFDF] outline-none py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm"
+                          >
+                            <option selected>District</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/2">
+                        <div class="input-container">
+                          <input
+                            formControlName="pincode"
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder">Pincode</label>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="grid sm:grid-cols-1 gap-2">
+                          <label
+                            for="hs-checkbox-on-right"
+                            class="flex p-3 w-full outline-none bg-white border border-gray-200 rounded-lg text-sm"
+                          >
+                            <span
+                              class="text-sm text-gray-500 dark:text-gray-400"
+                              >Default Address</span
+                            >
+                            <input
+                              type="checkbox"
+                              (change)="disable($event)"
+                              class="shrink-0 ms-auto mt-0.5 border-gray-200 rounded text-blue-600"
+                              id="hs-checkbox-on-right"
+                            />
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- temporary ADDRESS -->
+                  <div
+                    class="flex w-full gap-4 flex-col md:flex-row lg:flex-row"
+                  >
+                    <div
+                      [style.opacity]="hidetemp ? '0.5' : '1'"
+                      [style.pointer-events]="hidetemp ? 'none' : 'auto'"
+                      class="w-full border-[1px] border-solid border-[#E1DFDF] p-3 rounded-[10px]"
+                    >
+                      <div class="mt-3 mb-3">
+                        <p class="perm">Temporary Address</p>
+                      </div>
+                      <label class="" for="address">Address Line 1</label>
+                      <textarea
+                        name="address"
+                        class="resize-none bg-[#F3F4F6] w-full outline-none rounded-md p-2 mt-3 mb-3"
+                        id=""
+                        cols="30"
+                        rows="5"
+                      ></textarea>
+
+                      <div class="flex flex-col sm:flex-row gap-5">
+                        <div class="w-full sm:w-1/2">
+                          <div class="input-container">
+                            <select
+                              class="border-[1px] border-solid border-[#E1DFDF] outline-none py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm"
+                            >
+                              <option selected>Country</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                          <div class="input-container">
+                            <select
+                              class="border-[1px] border-solid border-[#E1DFDF] outline-none py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm"
+                            >
+                              <option selected>State</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col sm:flex-row gap-5 mt-4">
+                        <div class="w-full sm:w-1/2">
+                          <div class="input-container">
+                            <select
+                              class="border-[1px] border-solid border-[#E1DFDF] outline-none py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm"
+                            >
+                              <option selected>District</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                          <div class="input-container">
+                            <input
+                              class="w-full"
+                              type="text"
+                              id="input"
+                              name="input"
+                              placeholder=""
+                            />
+                            <label for="input" class="placeholder"
+                              >Pincode</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- temporary ADDRESS -->
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="flex gap-2 justify-end mt-7 h-[90px]">
+              <a routerLink="/personal" routerLinkActive="active">
+                <button
+                  type="button"
+                  class="py-3 bg-[#DBEAFE] px-4 w-[120px] h-[50px] outline-none items-center gap-x-2 text-md text-[#3D63F7] font-semibold rounded-lg text-gray-500"
+                >
+                  Next
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+        <div formGroupName="form2" *ngIf="control.get('form2')">
+          <div
+            class="w-full rounded-[24px] h-fit bg-[#Ffff] mt-10 mb-10 pb-0 p-[2em] drop-shadow-md sm:w-[800px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]"
+          >
+            <!-- progress-bar -->
+            <div class="progress">
+              <div class="flex justify-between items-center">
+                <h1>Application Form</h1>
+                <p>
+                  <span class="date">Last Updated</span>
+                  November 22 2023
+                </p>
+              </div>
+              <div
+                class="h-[90px] mt-[50px] hidden lg:flex items-center gap-[5px]"
+              >
+                <div class="relative">
+                  <span class="absolute top-[20%] z-30 left-[39%] text-[32px]"
+                    >1</span
+                  >
+                  <!-- cicle  -->
+                  <svg
+                    class="relative"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="60"
+                    height="63"
+                    viewBox="0 0 47 47"
+                    fill="none"
+                  >
+                    <circle cx="23.5" cy="23.5" r="23.5" fill="#3D63F7 " />
+                  </svg>
+                </div>
+                <div>
+                  <p class="app-para">Application</p>
+                </div>
+                <div class="relative">
+                  <div class="w-[215px] h-[1px] bg-[#E2E2E2;]"></div>
+                  <div class="absolute left-[30%] bottom-[-7px] z-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="#14AAFF"
+                    >
+                      <circle cx="7" cy="7" r="7" fill="#14AAFF" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="app-para">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="63"
+                    height="63"
+                    viewBox="0 0 47 47"
+                    fill="none"
+                  >
+                    <circle cx="23.5" cy="23.5" r="23.5" fill="#EDEFF5" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="app-para">Application</p>
+                </div>
+                <div class="w-[215px] h-[1px] bg-[#E2E2E2;]"></div>
+                <div class="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="63"
+                    height="63"
+                    viewBox="0 0 47 47"
+                    fill="none"
+                  >
+                    <circle cx="23.5" cy="23.5" r="23.5" fill="#EDEFF5" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="app-para">Application</p>
+                </div>
+                <div class="w-[215px] h-[1px] bg-[#E2E2E2;]"></div>
+                <div class="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="63"
+                    height="63"
+                    viewBox="0 0 47 47"
+                    fill="none"
+                  >
+                    <circle cx="23.5" cy="23.5" r="23.5" fill="#EDEFF5" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="app-para">Application</p>
+                </div>
+              </div>
+            </div>
+            <!-- porgess-bar-ends -->
+            <!-- personal-details -->
+
+            <section class="personal-Details">
+              <div class="flex gap-[9px] items-center mt-[50px] mb-[30px]">
+                <h2 class="">Parental Details</h2>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                >
+                  <path
+                    d="M9.91683 15.5833C9.07965 15.5833 8.25067 15.4184 7.47722 15.098C6.70377 14.7776 6.001 14.308 5.40902 13.7161C4.81705 13.1241 4.34747 12.4213 4.0271 11.6479C3.70672 10.8744 3.54183 10.0454 3.54183 9.20825C3.54183 8.37107 3.70672 7.5421 4.0271 6.76864C4.34747 5.99519 4.81705 5.29242 5.40902 4.70045C6.001 4.10847 6.70377 3.63889 7.47722 3.31852C8.25067 2.99815 9.07965 2.83325 9.91683 2.83325C11.6076 2.83325 13.2291 3.5049 14.4246 4.70045C15.6202 5.89599 16.2918 7.5175 16.2918 9.20825C16.2918 10.899 15.6202 12.5205 14.4246 13.7161C13.2291 14.9116 11.6076 15.5833 9.91683 15.5833ZM24.7918 21.2499C23.2889 21.2499 21.8476 20.6529 20.7849 19.5902C19.7222 18.5275 19.1252 17.0861 19.1252 15.5833C19.1252 14.0804 19.7222 12.639 20.7849 11.5763C21.8476 10.5136 23.2889 9.91659 24.7918 9.91659C26.2947 9.91659 27.7361 10.5136 28.7988 11.5763C29.8615 12.639 30.4585 14.0804 30.4585 15.5833C30.4585 17.0861 29.8615 18.5275 28.7988 19.5902C27.7361 20.6529 26.2947 21.2499 24.7918 21.2499ZM24.7918 22.6666C26.4826 22.6666 28.1041 23.3382 29.2996 24.5338C30.4952 25.7293 31.1668 27.3508 31.1668 29.0416V29.7499H18.4168V29.0416C18.4168 27.3508 19.0885 25.7293 20.284 24.5338C21.4796 23.3382 23.1011 22.6666 24.7918 22.6666ZM9.91683 16.9999C10.847 16.9999 11.7681 17.1831 12.6275 17.5391C13.4869 17.8951 14.2678 18.4168 14.9255 19.0746C15.5833 19.7323 16.105 20.5132 16.461 21.3726C16.8169 22.232 17.0002 23.1531 17.0002 24.0833V29.7499H2.8335V24.0833C2.8335 22.2046 3.57977 20.403 4.90816 19.0746C6.23654 17.7462 8.03821 16.9999 9.91683 16.9999Z"
+                    fill="#3D63F7"
+                  />
+                </svg>
+              </div>
+              <form action="" method="post">
+                <div
+                  class="w-[100%] rounded-[16px] border-[1px] border-solid border-[#E1DFDF] border: 1px solid #e1dfdf;"
+                >
+                  <div class="flex flex-col gap-2 items-center sm:gap-5">
+                    <div
+                      class="w-full flex justify-start border-b items-center p-[1em] border-b-[#E1DFDF]"
+                    >
+                      <h2>Father Details</h2>
+                    </div>
+                    <div
+                      class="w-full flex gap-10 items-center flex-col p-[1em] sm:flex-row"
+                    >
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >First Name</label
+                          >
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >Occupation</label
+                          >
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >Education</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="w-full flex gap-10 items-center flex-col p-[1em] sm:flex-row"
+                    >
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >Annual Income</label
+                          >
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder">Age</label>
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >Employer's Details
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="w-full flex gap-10 items-center flex-col p-[1em] sm:flex-row"
+                    >
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >Caste Category</label
+                          >
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >Mobile No</label
+                          >
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >Annual Income</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="w-full flex gap-10 items-center flex-col pl-[1em] pr-[1em] pb-[2em] sm:flex-row"
+                    >
+                      <div class="w-full sm:w-1/2 md:w-1/2 lg:1/2">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder">Email</label>
+                        </div>
+                      </div>
+                      <div class="w-full sm:w-1/2 md:w-1/2 lg:1/2">
+                        <div class="input-container">
+                          <input
+                            class="w-full"
+                            type="text"
+                            id="input"
+                            name="input"
+                            placeholder=""
+                          />
+                          <label for="input" class="placeholder"
+                            >PAN Number</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </section>
+            <section class="personal-Details mt-5">
+              <form
+                action=""
+                method="post"
+                [formGroup]="motherdetails"
+                (ngSubmit)="submit($event)"
+              >
+                <div
+                  class="w-[100%] rounded-[16px] border-[1px] border-solid border-[#E1DFDF] border: 1px solid #e1dfdf;"
+                >
+                  <div class="flex flex-col gap-2 items-center sm:gap-5">
+                    <div class="w-[100%] rounded-[16px]">
+                      <div class="flex flex-col gap-2 items-center sm:gap-5">
+                        <div
+                          class="w-full flex justify-start border-b items-center p-[1em] border-b-[#E1DFDF]"
+                        >
+                          <h2>Mother Details</h2>
+                        </div>
+                        <div
+                          class="w-full flex gap-10 items-center flex-col p-[1em] sm:flex-row"
+                        >
+                          <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                            <div class="input-container">
+                              <input
+                                class="w-full"
+                                type="text"
+                                id="input"
+                                name="input"
+                                placeholder=""
+                                formControlName="firstname"
+                              />
+                              <label for="input" class="placeholder"
+                                >First Name</label
+                              >
+                            </div>
+                          </div>
+                          <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                            <div class="input-container">
+                              <input
+                                class="w-full"
+                                type="text"
+                                id="input"
+                                name="input"
+                                placeholder=""
+                                formControlName="occupation"
+                              />
+                              <label for="input" class="placeholder"
+                                >Occupation</label
+                              >
+                            </div>
+                          </div>
+                          <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                            <div class="input-container">
+                              <input
+                                class="w-full"
+                                type="text"
+                                id="input"
+                                name="input"
+                                placeholder=""
+                                formControlName="education"
+                              />
+                              <label for="input" class="placeholder"
+                                >Education</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-full flex gap-10 items-center flex-col p-[1em] sm:flex-row"
+                        >
+                          <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                            <div class="input-container">
+                              <input
+                                class="w-full"
+                                type="text"
+                                id="input"
+                                name="input"
+                                placeholder=""
+                                formControlName="annualincome"
+                              />
+                              <label for="input" class="placeholder"
+                                >Annual Income</label
+                              >
+                            </div>
+                          </div>
+                          <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                            <div class="input-container">
+                              <input
+                                class="w-full"
+                                type="text"
+                                id="input"
+                                name="input"
+                                placeholder=""
+                                formControlName="age"
+                              />
+                              <label for="input" class="placeholder">Age</label>
+                            </div>
+                          </div>
+                          <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                            <div class="input-container">
+                              <input
+                                class="w-full"
+                                type="text"
+                                id="input"
+                                name="input"
+                                placeholder=""
+                                formControlName="employer"
+                              />
+                              <label for="input" class="placeholder"
+                                >Employer's Details
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-full flex gap-10 items-center flex-col p-[1em] pb-[2em] sm:flex-row"
+                        >
+                          <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                            <div class="input-container">
+                              <input
+                                class="w-full"
+                                type="text"
+                                id="input"
+                                name="input"
+                                placeholder=""
+                                formControlName="caste"
+                              />
+                              <label for="input" class="placeholder"
+                                >Caste Category</label
+                              >
+                            </div>
+                          </div>
+                          <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                            <div class="input-container">
+                              <input
+                                class="w-full"
+                                type="text"
+                                id="input"
+                                name="input"
+                                placeholder=""
+                                formControlName="mobileno"
+                              />
+                              <label for="input" class="placeholder"
+                                >Mobile No</label
+                              >
+                            </div>
+                          </div>
+                          <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                            <div class="input-container">
+                              <input
+                                class="w-full"
+                                type="text"
+                                id="input"
+                                name="input"
+                                placeholder=""
+                                formControlName="annualincome"
+                              />
+                              <label for="input" class="placeholder"
+                                >Annual Income</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-full flex gap-10 items-center flex-col pl-[1em] pr-[1em] pb-[2em] sm:flex-row"
+                        >
+                          <div class="w-full sm:w-1/2 md:w-1/2 lg:1/2">
+                            <div class="input-container">
+                              <input
+                                class="w-full"
+                                type="text"
+                                id="input"
+                                name="input"
+                                placeholder=""
+                                formControlName="email"
+                              />
+                              <label for="input" class="placeholder"
+                                >Email</label
+                              >
+                            </div>
+                          </div>
+                          <div class="w-full sm:w-1/2 md:w-1/2 lg:1/2">
+                            <div class="input-container">
+                              <input
+                                class="w-full"
+                                type="text"
+                                id="input"
+                                name="input"
+                                placeholder=""
+                                formControlName="pan"
+                              />
+                              <label for="input" class="placeholder"
+                                >PAN Number</label
+                              >
+                            </div>
+                          </div>
+                          <input type="submit" value="sumbit" name="submit" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </section>
+            <section class="guardian mt-5 mb-5">
+              <div class="grid sm:grid-cols-2 gap-2">
+                <label
+                  for="hs-checkbox-in-form"
+                  class="flex outline-none p-3 w-full bg-white border border-gray-200 rounded-lg text-sm"
+                >
+                  <input
+                    type="checkbox"
+                    (change)="toggleGuard($event)"
+                    class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600"
+                    id="hs-checkbox-in-form"
+                  />
+                  <span class="text-sm text-gray-500 ms-3 dark:text-gray-400"
+                    >Default checkbox</span
+                  >
+                </label>
+              </div>
+            </section>
+            <div
+              class="guard w-[100%] rounded-[16px] border-[1px] border-solid border-[#E1DFDF] border: 1px solid #e1dfdf;"
+              [style.display]="guardianVisible ? 'block' : 'none'"
+            >
+              <form action="" method="post">
+                <div class="flex flex-col gap-10 items-center sm:gap-5">
+                  <div class="w-[100%] rounded-[16px]">
+                    <div class="flex flex-col gap-10 items-center sm:gap-5">
+                      <div
+                        class="w-full flex justify-start border-b items-center p-[1em] border-b-[#E1DFDF]"
+                      >
+                        <h2>Guardian Details</h2>
+                      </div>
+                      <div
+                        class="w-full flex gap-10 items-center flex-col pl-[1em] pr-[1em] sm:flex-row"
+                      >
+                        <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                          <div class="input-container">
+                            <input
+                              class="w-full"
+                              type="text"
+                              id="input"
+                              name="input"
+                              placeholder=""
+                            />
+                            <label for="input" class="placeholder"
+                              >First Name</label
+                            >
+                          </div>
+
+                          <div class="input-container mt-7">
+                            <input
+                              class="w-full"
+                              type="text"
+                              id="input"
+                              name="input"
+                              placeholder=""
+                            />
+                            <label for="input" class="placeholder"
+                              >First Name</label
+                            >
+                          </div>
+                        </div>
+                        <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                          <div class="input-container">
+                            <input
+                              class="w-full"
+                              type="text"
+                              id="input"
+                              name="input"
+                              placeholder=""
+                            />
+                            <label for="input" class="placeholder"
+                              >Occupation</label
+                            >
+                          </div>
+                          <div class="input-container mt-7">
+                            <input
+                              class="w-full"
+                              type="text"
+                              id="input"
+                              name="input"
+                              placeholder=""
+                            />
+                            <label for="input" class="placeholder"
+                              >Occupation</label
+                            >
+                          </div>
+                        </div>
+                        <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                          <div class="input-container">
+                            <textarea
+                              name="address"
+                              class="resize-none bg-[#F3F4F6] w-full outline-none rounded-md p-2 mt-3 mb-3"
+                              id=""
+                              cols="30"
+                              rows="5"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="w-full flex gap-10 items-center flex-col pl-[1em] pr-[1em] pb-[2em] sm:flex-row"
+                      >
+                        <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                          <div class="input-container">
+                            <input
+                              class="w-full"
+                              type="text"
+                              id="input"
+                              name="input"
+                              placeholder=""
+                            />
+                            <label for="input" class="placeholder"
+                              >Caste Category</label
+                            >
+                          </div>
+                        </div>
+                        <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                          <div class="input-container">
+                            <input
+                              class="w-full"
+                              type="text"
+                              id="input"
+                              name="input"
+                              placeholder=""
+                            />
+                            <label for="input" class="placeholder"
+                              >Mobile No</label
+                            >
+                          </div>
+                        </div>
+                        <div class="w-full sm:w-1/3 md:w-1/3 lg:1/3">
+                          <div class="input-container">
+                            <input
+                              class="w-full"
+                              type="text"
+                              id="input"
+                              name="input"
+                              placeholder=""
+                            />
+                            <label for="input" class="placeholder"
+                              >Annual Income</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="flex gap-2 justify-end mt-7 h-[90px]">
+              <a routerLink="/application" routerLinkActive="active">
+                <button
+                  type="button"
+                  class="py-3 px-4 w-[120px] h-[50px] outline-none border-[1px] border-solid border-[#E1DFDF] items-center gap-x-2 text-md font-semibold rounded-lg"
+                >
+                  Back
+                </button>
+              </a>
+              <a
+                [routerLink]="['/fileupload']"
+                routerLinkActive="router-link-active"
+              >
+                <button
+                  type="button"
+                  class="py-3 bg-[#DBEAFE] px-4 w-[120px] h-[50px] outline-none items-center gap-x-2 text-md text-[#3D63F7] font-semibold rounded-lg text-gray-500"
+                >
+                  Next
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-yellow"
+          formGroupName="form3"
+          *ngIf="control.get('form3')"
+        >
+          <input formControlName="email" placeholder="age" />
+          <input formControlName="phoneNumber" placeholder="Phone Number" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="onSubmit()">Submit</button>
+</form>

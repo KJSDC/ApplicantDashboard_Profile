@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #393939;
+  font-size: 38px;
+}
+h2 {
+  color: #393939;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.12px;
+}
+.date {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #758492;
+}
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #393939;
+}
+.absolute {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.09px;
+}
+
+.app-para {
+  color: #393939;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.12px;
+}
+.input-container {
+  position: relative;
+}
+
+.input-container input {
+  padding: 10px;
+  border: 1px solid #e1dfdf;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+  font-size: 16px;
+  height: 50px;
+  outline: none;
+}
+
+.input-container input:focus {
+  border-color: #1e90ff;
+}
+
+.placeholder {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #6b7280;
+  pointer-events: none;
+  background-color: white;
+  transition: all 0.3s ease;
+  transition: top 0.3s ease, left 0.3s ease, color 0.3s ease;
+}
+label {
+  font-size: 16px;
+  color: #6b7280;
+}
+select {
+  font-size: 16px;
+  color: #6b7280;
+}
+.input-container input:focus ~ .placeholder,
+.input-container input:not(:placeholder-shown) ~ .placeholder {
+  top: 0;
+  left: 10px;
+  color: #1e90ff;
+}
+
+input.ng-touched.ng-invalid{
+  border: 1px red solid;
+}

@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+li {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #626f86;
+  font-size: 16px;
+ 
+}
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: #393939;
+  font-size: 28px;
+}
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.24px;
+  color: #292929;
+  font-size: 16px;
+}
+li:hover{
+  background-color: #f0f1f3;
+  border-radius: 10px;
+
+}
+.toggle:hover{
+  background-color: #f0f1f3;
+}
+
+.sidebar {
+  transition: width 0.3s ease-in-out;
+}
+.nav {
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+@media screen and (max-width: 1660px) {
+  .sidebar {
+    width: 70px !important;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .sidebar {
+    width: 0px !important;
+  }
+  .first {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+}
+@media screen and (min-width: 900px) {
+  .nav {
+    display: none !important;
+  }
+  .show {
+    display: none;
+  }
+}

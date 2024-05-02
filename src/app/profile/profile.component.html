@@ -1,0 +1,171 @@
+<!--Main Border-->
+<div class=" w-full rounded-[24px] h-fit border-[1px] border-Gray200 bg-White mt-[2.5rem] mb-10 pb-0 p-[2em] box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.1),
+0px 10px 8px 0px rgba(0, 0, 0, 0.04) sm:w-[800px] md:w-[900px] lg:w-[1024px] xl:w-[1300px] ">
+<div class="">
+<div class="flex justify-between items-center">
+<h1>
+Profile
+</h1>
+</div>
+
+<!--Profile Picture-->
+<div class="flex justify-center">
+<div class=" h-[90px] mt-[30px] hidden lg:flex items-center gap-[5px] ">
+<div class="relative">
+<span class="absolute top-[32%] z-30 left-[33%]"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+<path d="M17.27 18.595C12.143 18.595 7.972 14.424 7.972 9.297C7.972 4.17 12.143 0 17.27 0C22.397 0 26.568 4.171 26.568 9.298C26.568 14.425 22.397 18.595 17.27 18.595ZM17.27 0.883C12.631 0.883 8.856 4.658 8.856 9.297C8.856 13.936 12.631 17.711 17.27 17.711C21.909 17.711 25.684 13.936 25.684 9.297C25.684 4.658 21.909 0.883 17.27 0.883ZM34.098 34.278H0.442C0.324774 34.278 0.21235 34.2314 0.129459 34.1485C0.0465676 34.0656 0 33.9532 0 33.836V28.129C0.403 20.88 6.934 20.443 7 20.439L27.513 20.438C27.603 20.442 34.136 20.88 34.538 28.104L34.539 33.836C34.5393 33.894 34.528 33.9515 34.506 34.0052C34.4839 34.0589 34.4515 34.1077 34.4105 34.1488C34.3695 34.1899 34.3208 34.2224 34.2672 34.2446C34.2135 34.2668 34.156 34.2781 34.098 34.278ZM0.884 33.395H33.656V28.129C33.298 21.711 27.727 21.334 27.49 21.321L7.025 21.322C6.813 21.335 1.242 21.732 0.884 28.153V33.395Z" fill="black"/>
+</svg>
+</span>
+<span>
+<svg class="relative" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+<circle cx="50" cy="50" r="50" fill="#F8F8F8"/></svg>
+</span>
+</div>
+</div>
+</div >
+
+<!--Profile Name-->
+<div class="flex justify-center">
+<div class=" mt-3 rounded-[12px] w-72 h-14 border-[14px] border-Gray60 bg-Gray60">
+<h2 class=" mt-1 flex justify-center">Jessica John </h2> 
+</div>
+</div>
+</div>
+
+<!--Profile details Form Starts-->
+<!--Non Editable Fields-->
+<div class="flex justify-start">
+<form class="mt-10 max-w-sm mx-96">
+<input type="text" id="disabled-input" aria-label="disabled input" class=" mb-5 h-14 border-Gray200 bg-gray-100 border text-Gray500 text-sm rounded-lg w-[485px] p-2.5 cursor-not-allowed " value="jessicajohn@gmail.com" disabled>
+<input type="text" id="disabled-input" aria-label="disabled input" class="mb-5 h-14 border-Gray200 bg-gray-100 border text-Gray500 text-sm rounded-lg w-[485px] p-2.5 cursor-not-allowed " value="30/11/2000" disabled>
+<input type="text" id="disabled-input" aria-label="disabled input" class="mb-5 h-14 border-Gray200 bg-gray-100 border text-Gray500 text-sm rounded-lg w-[485px] p-2.5 cursor-not-allowed " value="Female" disabled>
+
+</form>
+</div>
+
+<!--Editable Fields-->
+<!--Phone num-->
+<ng-container >
+<div class="flex justify-center">
+<form class=" flex justify-center max-w-sm mx-auto">
+    <div class="flex items-center">
+        <button (click)="toggleDropdown()" id="dropdown-phone-button" data-dropdown-toggle="dropdown-phone" class=" h-14 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900  border border-Gray200 rounded-s-lg" type="button">
+            <svg fill="none" aria-hidden="true" class="h-4 w-4 me-2" viewBox="0 0 20 15"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/><mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/></mask><g mask="url(#a)"><path fill="#D02F44" fill-rule="evenodd" d="M19.6.5H0v.933h19.6V.5zm0 1.867H0V3.3h19.6v-.933zM0 4.233h19.6v.934H0v-.934zM19.6 6.1H0v.933h19.6V6.1zM0 7.967h19.6V8.9H0v-.933zm19.6 1.866H0v.934h19.6v-.934zM0 11.7h19.6v.933H0V11.7zm19.6 1.867H0v.933h19.6v-.933z" clip-rule="evenodd"/><path fill="#46467F" d="M0 .5h8.4v6.533H0z"/><g filter="url(#filter0_d_343_121520)"><path fill="url(#paint0_linear_343_121520)" fill-rule="evenodd" d="M1.867 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.866 0a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM7.467 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zM2.333 3.3a.467.467 0 100-.933.467.467 0 000 .933zm2.334-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.4.467a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm-2.334.466a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.466a.467.467 0 11-.933 0 .467.467 0 01.933 0zM1.4 4.233a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM6.533 4.7a.467.467 0 11-.933 0 .467.467 0 01.933 0zM7 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zM3.267 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0z" clip-rule="evenodd"/></g></g><defs><linearGradient id="paint0_linear_343_121520" x1=".933" x2=".933" y1="1.433" y2="6.1" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#F0F0F0"/></linearGradient><filter id="filter0_d_343_121520" width="6.533" height="5.667" x=".933" y="1.433" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="1"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_343_121520"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_343_121520" result="shape"/></filter></defs></svg>
+        +1 <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
+        </button>
+        <div id="dropdown-phone" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-52 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-phone-button">
+                <li>
+                    <button  *ngIf="isDropdownOpen"  type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg fill="none" aria-hidden="true" class="h-4 w-4 me-2" viewBox="0 0 20 15"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/><mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/></mask><g mask="url(#a)"><path fill="#D02F44" fill-rule="evenodd" d="M19.6.5H0v.933h19.6V.5zm0 1.867H0V3.3h19.6v-.933zM0 4.233h19.6v.934H0v-.934zM19.6 6.1H0v.933h19.6V6.1zM0 7.967h19.6V8.9H0v-.933zm19.6 1.866H0v.934h19.6v-.934zM0 11.7h19.6v.933H0V11.7zm19.6 1.867H0v.933h19.6v-.933z" clip-rule="evenodd"/><path fill="#46467F" d="M0 .5h8.4v6.533H0z"/><g filter="url(#filter0_d_343_121520)"><path fill="url(#paint0_linear_343_121520)" fill-rule="evenodd" d="M1.867 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.866 0a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM7.467 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zM2.333 3.3a.467.467 0 100-.933.467.467 0 000 .933zm2.334-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.4.467a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm-2.334.466a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.466a.467.467 0 11-.933 0 .467.467 0 01.933 0zM1.4 4.233a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM6.533 4.7a.467.467 0 11-.933 0 .467.467 0 01.933 0zM7 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zM3.267 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0z" clip-rule="evenodd"/></g></g><defs><linearGradient id="paint0_linear_343_121520" x1=".933" x2=".933" y1="1.433" y2="6.1" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#F0F0F0"/></linearGradient><filter id="filter0_d_343_121520" width="6.533" height="5.667" x=".933" y="1.433" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="1"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_343_121520"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_343_121520" result="shape"/></filter></defs></svg>
+                            United States (+1)
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <button *ngIf="isDropdownOpen"  type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg class="h-4 w-4 me-2" fill="none" viewBox="0 0 20 15"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/><mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/></mask><g mask="url(#a)"><path fill="#0A17A7" d="M0 .5h19.6v14H0z"/><path fill="#fff" fill-rule="evenodd" d="M-.898-.842L7.467 4.8V-.433h4.667V4.8l8.364-5.642L21.542.706l-6.614 4.46H19.6v4.667h-4.672l6.614 4.46-1.044 1.549-8.365-5.642v5.233H7.467V10.2l-8.365 5.642-1.043-1.548 6.613-4.46H0V5.166h4.672L-1.941.706-.898-.842z" clip-rule="evenodd"/><path stroke="#DB1F35" stroke-linecap="round" stroke-width=".667" d="M13.067 4.933L21.933-.9M14.009 10.088l7.947 5.357M5.604 4.917L-2.686-.67M6.503 10.024l-9.189 6.093"/><path fill="#E6273E" fill-rule="evenodd" d="M0 8.9h8.4v5.6h2.8V8.9h8.4V6.1h-8.4V.5H8.4v5.6H0v2.8z" clip-rule="evenodd"/></g></svg>
+                            United Kingdom (+44)
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <button *ngIf="isDropdownOpen"  type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg class="h-4 w-4 me-2" fill="none" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/><mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/></mask><g mask="url(#a)"><path fill="#0A17A7" d="M0 .5h19.6v14H0z"/><path fill="#fff" stroke="#fff" stroke-width=".667" d="M0 .167h-.901l.684.586 3.15 2.7v.609L-.194 6.295l-.14.1v1.24l.51-.319L3.83 5.033h.73L7.7 7.276a.488.488 0 00.601-.767L5.467 4.08v-.608l2.987-2.134a.667.667 0 00.28-.543V-.1l-.51.318L4.57 2.5h-.73L.66.229.572.167H0z"/><path fill="url(#paint0_linear_374_135177)" fill-rule="evenodd" d="M0 2.833V4.7h3.267v2.133c0 .369.298.667.666.667h.534a.667.667 0 00.666-.667V4.7H8.2a.667.667 0 00.667-.667V3.5a.667.667 0 00-.667-.667H5.133V.5H3.267v2.333H0z" clip-rule="evenodd"/><path fill="url(#paint1_linear_374_135177)" fill-rule="evenodd" d="M0 3.3h3.733V.5h.934v2.8H8.4v.933H4.667v2.8h-.934v-2.8H0V3.3z" clip-rule="evenodd"/><path fill="#fff" fill-rule="evenodd" d="M4.2 11.933l-.823.433.157-.916-.666-.65.92-.133.412-.834.411.834.92.134-.665.649.157.916-.823-.433zm9.8.7l-.66.194.194-.66-.194-.66.66.193.66-.193-.193.66.193.66-.66-.194zm0-8.866l-.66.193.194-.66-.194-.66.66.193.66-.193-.193.66.193.66-.66-.193zm2.8 2.8l-.66.193.193-.66-.193-.66.66.193.66-.193-.193.66.193.66-.66-.193zm-5.6.933l-.66.193.193-.66-.193-.66.66.194.66-.194-.193.66.193.66-.66-.193zm4.2 1.167l-.33.096.096-.33-.096-.33.33.097.33-.097-.097.33.097.33-.33-.096z" clip-rule="evenodd"/></g><defs><linearGradient id="paint0_linear_374_135177" x1="0" x2="0" y1=".5" y2="7.5" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#F0F0F0"/></linearGradient><linearGradient id="paint1_linear_374_135177" x1="0" x2="0" y1=".5" y2="7.033" gradientUnits="userSpaceOnUse"><stop stop-color="#FF2E3B"/><stop offset="1" stop-color="#FC0D1B"/></linearGradient></defs></svg>
+                            Australia (+61)
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <button *ngIf="isDropdownOpen"  type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg class="w-4 h-4 me-2" fill="none" viewBox="0 0 20 15"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/><mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/></mask><g mask="url(#a)"><path fill="#262626" fill-rule="evenodd" d="M0 5.167h19.6V.5H0v4.667z" clip-rule="evenodd"/><g filter="url(#filter0_d_374_135180)"><path fill="#F01515" fill-rule="evenodd" d="M0 9.833h19.6V5.167H0v4.666z" clip-rule="evenodd"/></g><g filter="url(#filter1_d_374_135180)"><path fill="#FFD521" fill-rule="evenodd" d="M0 14.5h19.6V9.833H0V14.5z" clip-rule="evenodd"/></g></g><defs><filter id="filter0_d_374_135180" width="19.6" height="4.667" x="0" y="5.167" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_374_135180"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_374_135180" result="shape"/></filter><filter id="filter1_d_374_135180" width="19.6" height="4.667" x="0" y="9.833" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_374_135180"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_374_135180" result="shape"/></filter></defs></svg>
+                            Germany (+49)
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <button *ngIf="isDropdownOpen"  type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg class="w-4 h-4 me-2" fill="none" viewBox="0 0 20 15"><rect width="19.1" height="13.5" x=".25" y=".75" fill="#fff" stroke="#F5F5F5" stroke-width=".5" rx="1.75"/><mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse"><rect width="19.1" height="13.5" x=".25" y=".75" fill="#fff" stroke="#fff" stroke-width=".5" rx="1.75"/></mask><g mask="url(#a)"><path fill="#F44653" d="M13.067.5H19.6v14h-6.533z"/><path fill="#1035BB" fill-rule="evenodd" d="M0 14.5h6.533V.5H0v14z" clip-rule="evenodd"/></g></svg>
+                            France (+33)
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <button *ngIf="isDropdownOpen"  type="button" class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg class="w-4 h-4 me-2" fill="none" viewBox="0 0 20 15"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/><mask id="a" style="mask-type:luminance" width="20" height="15" x="0" y="0" maskUnits="userSpaceOnUse"><rect width="19.6" height="14" y=".5" fill="#fff" rx="2"/></mask><g mask="url(#a)"><path fill="#262626" fill-rule="evenodd" d="M0 5.167h19.6V.5H0v4.667z" clip-rule="evenodd"/><g filter="url(#filter0_d_374_135180)"><path fill="#F01515" fill-rule="evenodd" d="M0 9.833h19.6V5.167H0v4.666z" clip-rule="evenodd"/></g><g filter="url(#filter1_d_374_135180)"><path fill="#FFD521" fill-rule="evenodd" d="M0 14.5h19.6V9.833H0V14.5z" clip-rule="evenodd"/></g></g><defs><filter id="filter0_d_374_135180" width="19.6" height="4.667" x="0" y="5.167" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_374_135180"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_374_135180" result="shape"/></filter><filter id="filter1_d_374_135180" width="19.6" height="4.667" x="0" y="9.833" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_374_135180"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_374_135180" result="shape"/></filter></defs></svg>
+                            Germany (+49)
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <label for="phone-input" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Phone number:</label>
+        <div class="relative">
+            <input type="phone" id="phone-input" class="h-14 p-2.5 w-80 z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border border-Gray200 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500 pl-10" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" disabled />
+            
+        </div>
+        <span class="ml-5"(click)="enableInput()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 16 16" fill="none">
+  <path d="M1 15H2.098L12.796 4.30198L11.698 3.20398L1 13.902V15ZM0 16V13.48L13.18 0.287977C13.2827 0.196643 13.396 0.125977 13.52 0.0759768C13.644 0.0259768 13.773 0.000976562 13.907 0.000976562C14.0417 0.000976562 14.1717 0.0219768 14.297 0.0639768C14.4237 0.106643 14.5403 0.18331 14.647 0.293977L15.713 1.36598C15.8237 1.47264 15.899 1.58931 15.939 1.71598C15.9797 1.84331 16 1.97064 16 2.09798C16 2.23331 15.977 2.36298 15.931 2.48698C15.8857 2.61031 15.813 2.72331 15.713 2.82598L2.52 16H0ZM12.237 3.76198L11.698 3.20398L12.796 4.30198L12.237 3.76198Z absolute inset-y-0 left-10 top-3" fill="black"/>
+</svg>
+</span>
+    </div>
+</form>
+</div>
+</ng-container>
+
+
+<ng-container >
+
+<div class="mt-4 mb-4 flex ml-96">
+    <div [class]="isClicked ? ' rounded-[12px] w-44 h-14 border border-Blue500 bg-Blue500 ' : ' rounded-[12px] w-44 h-14 border-[14px] border-Gray200 bg-Gray200'">
+        <h2 class=" fixed right-1/2">Save</h2> 
+      </div>
+     
+
+
+
+<div class="mt-2" >
+<button class="ml-28 mt-5 justify-center" (click)="toggleContainerVisibility()" >Change Password?</button>
+</div>
+<div class="mt-7 ml-1">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+<path d="M10 10.5332C9.7024 10.5344 9.41339 10.6333 9.17743 10.8147C8.94147 10.9961 8.77162 11.2499 8.69399 11.5373C8.61636 11.8246 8.63525 12.1295 8.74775 12.405C8.86025 12.6805 9.06014 12.9115 9.31669 13.0624V14.9999H10.7V13.0624C10.903 12.9423 11.0714 12.7718 11.189 12.5674C11.3065 12.3629 11.3692 12.1315 11.3709 11.8957C11.3709 11.7161 11.3353 11.5382 11.2663 11.3724C11.1974 11.2065 11.0962 11.056 10.9688 10.9293C10.8414 10.8027 10.6903 10.7025 10.524 10.6345C10.3577 10.5666 10.1796 10.5321 10 10.5332Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.1208 7.40405H4.87495C3.88084 7.40405 3.07495 8.20994 3.07495 9.20405V16.3249C3.07495 17.319 3.88084 18.1249 4.87495 18.1249H15.1208C16.1149 18.1249 16.9208 17.319 16.9208 16.3249V9.20405C16.9208 8.20994 16.1149 7.40405 15.1208 7.40405Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.5625 7.40417V6.31667C5.5625 5.13866 6.03046 4.00891 6.86343 3.17593C7.69641 2.34296 8.82616 1.875 10.0042 1.875C11.1822 1.875 12.3119 2.34296 13.1449 3.17593C13.9779 4.00891 14.4458 5.13866 14.4458 6.31667V7.40417" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+</div>
+
+
+<!--Change Password-->
+
+<div class="mt-4 ml-2 flex justify-center items-center " *ngIf="isContainerVisible">
+<div >
+<label for="first_name" class="block mb-2 text-sm font-medium ">Enter Current Password</label>
+<input type="text" id="first_name" class=" h-14 border-Gray200 bg-gray-100 border text-Gray500 text-sm rounded-lg w-[485px] p-2.5 " placeholder="" required />
+</div>
+</div>
+<div class="mt-4 ml-2 flex justify-center items-center " *ngIf="isContainerVisible">
+    <div >
+    <label for="first_name" class="block mb-2 text-sm font-medium ">Enter New Password</label>
+    <input type="text" id="first_name" class=" h-14 border-Gray200 bg-gray-100 border text-Gray500 text-sm rounded-lg w-[485px] p-2.5 " placeholder="" required />
+    </div>
+    </div>
+<div class="mt-4 ml-2 flex justify-center items-center " *ngIf="isContainerVisible">
+<div>
+<label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm Password</label>
+<input type="text" id="last_name" class=" h-14 border-Gray200 bg-gray-100 border text-Gray500 text-sm rounded-lg w-[485px] p-2.5 " placeholder="" required />
+</div>
+</div>
+<div class=" flex justify-center items-center text-center mb-6" *ngIf="isContainerVisible"> 
+<button type="submit" class="mr-44 pb-5 pt-1 h-1 border-[8px] border-Gray200 bg-Gray200 mt-4 ml-48 text-white bg-black font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Submit</button>
+</div>
+</ng-container>
+</div>

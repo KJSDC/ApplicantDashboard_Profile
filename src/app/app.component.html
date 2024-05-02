@@ -1,0 +1,187 @@
+<main class="bg-Slate50 drop-shadow-lg flex h-full w-full">
+  <div
+    [style.width]="shownav"
+    class="nav absolute w-[200px] h-full bg-purple left-0 z-50"
+  >
+    <div class="secondnav flex rounded-lg"></div>
+  </div>
+  <div
+    [style.width]="sidebarWidth"
+    class="sidebar overflow-hidden sticky top-0 h-[100vh] bg-blue-500 border-r-[1px] border-solid border-Gray200"
+  >
+  <div class="flex items-center gap-7 p-2 bg-White border-b-[1px] border-b-Gray200 pb-[12px]">
+    <img src="assets/logo.png" alt="" />
+    <div class="w-full">
+     <h2>Kristu Jayanti</h2>
+    </div>
+  </div>
+   
+ 
+    <div class="w-full h-full bg-White flex pl-[0.5em] pr-[0.5em] items-center">
+      <div class="mb-auto mt-[1rem]">
+        <ul>
+          <li >
+            <a
+              class="flex items-center mt-4 gap-5 h-14 "
+              [routerLink]="['/dashboard']"
+              routerLinkActive="active"
+            >
+            <div class="border-[1px] border-Gray200 rounded-xl p-[0.3em] m-[0.3em]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M8.557 2.75H4.682A1.932 1.932 0 0 0 2.75 4.682v3.875a1.942 1.942 0 0 0 1.932 1.942h3.875a1.942 1.942 0 0 0 1.942-1.942V4.682A1.942 1.942 0 0 0 8.557 2.75m10.761 0h-3.875a1.942 1.942 0 0 0-1.942 1.932v3.875a1.943 1.943 0 0 0 1.942 1.942h3.875a1.942 1.942 0 0 0 1.932-1.942V4.682a1.932 1.932 0 0 0-1.932-1.932m0 10.75h-3.875a1.942 1.942 0 0 0-1.942 1.933v3.875a1.942 1.942 0 0 0 1.942 1.942h3.875a1.942 1.942 0 0 0 1.932-1.942v-3.875a1.932 1.932 0 0 0-1.932-1.932M8.557 13.5H4.682a1.943 1.943 0 0 0-1.932 1.943v3.875a1.932 1.932 0 0 0 1.932 1.932h3.875a1.942 1.942 0 0 0 1.942-1.932v-3.875a1.942 1.942 0 0 0-1.942-1.942" />
+              </svg>
+            </div>
+           
+              Dashboard</a
+            >
+          </li>
+          <li>
+            <a
+              class="flex items-center mt-7 gap-5 w-full h-14 "
+              [routerLink]="['/myqueries']"
+              routerLinkActive="active"
+              >
+              <div class="border-[1px] border-Gray200 rounded-xl p-[0.3em] m-[0.3em]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                  <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M8 9h8m-8 4h6m1 5h-2l-5 3v-3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v5.5M19 16v3m0 3v.01" />
+                </svg>
+              </div>
+             
+              My Queries</a
+            >
+          </li>
+          <li>
+            <a
+              class="flex items-center mt-7 gap-5 h-14 "
+              [routerLink]="['/application']"
+              routerLinkActive="active"
+              >
+              <div class="border-[1px] border-Gray200 rounded-xl p-[0.3em] m-[0.3em]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 20 20">
+                  <path fill="black" d="M5.5 5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm1 6a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m0-1a.5.5 0 1 1 0-1a.5.5 0 0 1 0 1M8 13.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0m-1 0a.5.5 0 1 0-1 0a.5.5 0 0 0 1 0m2-4a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 3.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM6 3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zM4 6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+                </svg>
+              </div>
+             
+              Forms</a
+            >
+          </li>
+          <li>
+            <a
+              class="flex items-center mt-9 gap-5"
+              [routerLink]="['/profile']"
+              routerLinkActive="active"
+              >
+              <div class="border-[1px] border-Gray200 rounded-xl p-[0.3em] m-[0.3em]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                  <g fill="none" stroke="black" stroke-width="1.35">
+                    <path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+                    <circle cx="12" cy="7" r="3" />
+                  </g>
+                </svg>
+              </div>
+            
+              Profile
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center mt-9 gap-5 h-14 pr-[0.5em] "
+              [routerLink]="['/communication']"
+              routerLinkActive="active"
+              >
+              <div class="border-[1px] border-Gray200 rounded-xl p-[0.3em] m-[0.3em]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 48 48">
+                  <g fill="none" stroke="black" stroke-linecap="round" stroke-width="1.95">
+                    <path stroke-linejoin="round" d="M33 38H22v-8h14v-8h8v16h-5l-3 3z" />
+                    <path stroke-linejoin="round" d="M4 6h32v24H17l-4 4l-4-4H4z" />
+                    <path d="M19 18h1m6 0h1m-15 0h1" />
+                  </g>
+                </svg>
+              </div>
+             
+              Communication</a
+            >
+          </li>
+          <li>
+            <a
+              class="flex items-center mt-9 gap-5 h-14 "
+              [routerLink]="['/payment']"
+              routerLinkActive="active"
+              >
+              <div class="border-[1px] border-Gray200 rounded-xl p-[0.3em] m-[0.3em]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 28 28">
+                  <path fill="black" d="M18.25 16.5a.75.75 0 0 0 0 1.5h3.5a.75.75 0 0 0 0-1.5zM2.004 8.75A3.75 3.75 0 0 1 5.754 5H22.25A3.75 3.75 0 0 1 26 8.75v10.5A3.75 3.75 0 0 1 22.25 23H5.755a3.75 3.75 0 0 1-3.75-3.75zm3.75-2.25a2.25 2.25 0 0 0-2.25 2.25v.75H24.5v-.75a2.25 2.25 0 0 0-2.25-2.25zm-2.25 12.75a2.25 2.25 0 0 0 2.25 2.25H22.25a2.25 2.25 0 0 0 2.25-2.25V11H3.505z" />
+                </svg>
+              </div>
+             
+              Payment</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="bg-Zinc50 w-full h-full">
+    <div class="top-0 sticky z-50 border-b-[1px] border-solid border-Gray200">
+      <nav class=" bg w-full h-[60px]  bg-White   pl-4 pr-4">
+        <ul class="flex gap-4 justify-between items-center h-full">
+          <div class="flex justify-start gap-5  items-center w-full h-[61px]  pl-[0.5em] pr-[0.5em] ">
+            <div  class="toggle border-[1px] border-Gray200 rounded-xl p-[0.3em]">
+              <svg *ngIf="isSidebarExpanded" (click)="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                <g fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35">
+                  <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm5-2v16" />
+                  <path d="m15 10l-2 2l2 2" />
+                </g>
+              </svg>
+               <svg *ngIf="!isSidebarExpanded" (click)="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                <g  fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35">
+                  <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm11-2v16" />
+                  <path d="m9 10l2 2l-2 2" />
+                </g>
+              </svg>
+            </div>
+            <h1>E-Form</h1>
+                  </div>
+          <div class="flex items-center gap-4 p-2">
+            <div class="border-[1px] border-Gray200 rounded-full p-[0.5em]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                <g fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35">
+                  <path d="M19.875 6.27A2.225 2.225 0 0 1 21 8.218v7.284c0 .809-.443 1.555-1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1-2.184 0l-6.75-4.27A2.225 2.225 0 0 1 3 15.502V8.217c0-.809.443-1.554 1.158-1.947l6.75-3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98z" />
+                  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0-6 0" />
+                </g>
+              </svg>
+            </div>
+         <div class="border-[1px] border-Gray200 rounded-full p-[0.4em]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512">
+            <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="25.25" d="M427.68 351.43C402 320 383.87 304 383.87 217.35C383.87 138 343.35 109.73 310 96c-4.43-1.82-8.6-6-9.95-10.55C294.2 65.54 277.8 48 256 48s-38.21 17.55-44 37.47c-1.35 4.6-5.52 8.71-9.95 10.53c-33.39 13.75-73.87 41.92-73.87 121.35C128.13 304 110 320 84.32 351.43C73.68 364.45 83 384 101.61 384h308.88c18.51 0 27.77-19.61 17.19-32.57M320 384v16a64 64 0 0 1-128 0v-16" />
+          </svg> 
+         </div>
+          
+         <div class="flex items-center gap-2 pa">
+          <div class="">
+            <div class="border-[1px] border-Gray200 rounded-full p-[0.3em] m-[0.3em]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                <g fill="none" stroke="black" stroke-width="1.35">
+                  <path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+                  <circle cx="12" cy="7" r="3" />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="">
+            <h2> Niranjan</h2>
+          </div>
+         </div>
+      
+          
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <div class="flex flex-col justify-center items-center w-full h-full">
+        <router-outlet> </router-outlet>
+      </div>
+    </div>
+  </div>
+</main>
